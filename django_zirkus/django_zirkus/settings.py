@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-i*i1-(ay7muq_yk35ehe7=u6gud7p@wt0lvw1pk9k4^+3$l3&2
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['zirkusrevsbech.pythonanywhere.com']
+ALLOWED_HOSTS = ['zirkusrevsbech.pythonanywhere.com', '127.0.0.1']
 
 
 # Application definition
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -123,6 +124,10 @@ STATICFILES_DIRS = [
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'collectedstatic')
 # Default primary key field type
-# https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
+
+# https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field# Media url and root I made for storing images based on this guy:
+# https://www.youtube.com/watch?v=ygzGr51dbsY&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=26
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
