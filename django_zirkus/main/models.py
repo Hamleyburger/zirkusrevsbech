@@ -4,6 +4,8 @@ from django.utils.html import mark_safe
 
 # Create your models here.
 class Post(models.Model):
+    admin_name = models.CharField(max_length=150, blank=False,
+                             help_text="Titel", default="Post")
     title = models.CharField(max_length=150, blank=False,
                              help_text="Titel")
     body = RichTextField(
@@ -12,3 +14,4 @@ class Post(models.Model):
                               help_text=mark_safe("Pænest hvis billedet er kvadratisk. <a href='https://croppola.com/' target='_blank'>Kan f.eks. ændres her.</a>"))
     created_date = models.DateTimeField(auto_now_add=True)
     modified_date = models.DateTimeField(auto_now=True)
+

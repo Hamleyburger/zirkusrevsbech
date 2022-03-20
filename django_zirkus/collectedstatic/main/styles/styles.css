@@ -1,0 +1,328 @@
+html {
+  padding: 0;
+}
+
+html body {
+  margin: 0;
+  padding-bottom: 100px;
+  position: relative;
+  min-height: 100vh;
+  background-image: url("../../images/concrete-wall-g624dcf081_1920.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+  color: #260021;
+  font-family: 'Urbanist', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+html body .container-fluid {
+  margin-bottom: 50px;
+}
+
+html main {
+  padding-top: 32vw;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+@media only screen and (max-width: 662px) {
+  html main {
+    padding-top: 60vw;
+  }
+}
+
+.flowers {
+  width: 40%;
+  position: fixed;
+  z-index: 2;
+}
+
+@media only screen and (max-width: 662px) {
+  .flowers {
+    width: 70%;
+    min-width: 300px;
+    position: fixed;
+    z-index: 2;
+  }
+}
+
+.head {
+  position: relative;
+  height: 42vw;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+          filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
+}
+
+@media only screen and (max-width: 662px) {
+  .head {
+    height: 70vw;
+    height: 180vw;
+  }
+}
+
+.head .lefthead {
+  -webkit-clip-path: polygon(0% 0, 95% 0, 61% 100%, 0% 100%);
+          clip-path: polygon(0% 0, 95% 0, 61% 100%, 0% 100%);
+  position: absolute;
+  width: 64%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 662px) {
+  .head .lefthead {
+    width: 100%;
+    height: 60%;
+    left: 0;
+    top: 0;
+    -webkit-clip-path: polygon(0% 0, 354% 0, 0% 87%, 0% 100%);
+            clip-path: polygon(0% 0, 354% 0, 0% 87%, 0% 100%);
+  }
+}
+
+.head .lefthead .bg-wrapper {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+  background-image: url(../../images/leppardfur.jpeg);
+  background-size: 100%;
+  -webkit-filter: brightness(0.1) saturate(0.3);
+          filter: brightness(0.1) saturate(0.3);
+}
+
+.head .lefthead img {
+  width: 37%;
+  margin-left: 20%;
+  margin-top: 23%;
+  -webkit-filter: drop-shadow(0px 0px 2px rgba(255, 236, 0, 0.6));
+          filter: drop-shadow(0px 0px 2px rgba(255, 236, 0, 0.6));
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+}
+
+@media only screen and (max-width: 662px) {
+  .head .lefthead img {
+    width: 53%;
+    margin-left: 23%;
+    margin-top: 32%;
+  }
+}
+
+.head .righthead {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 64%;
+  margin-right: 0;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 662px) {
+  .head .righthead {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.head .righthead .sofie {
+  width: 100%;
+  position: absolute;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  top: 69%;
+  right: 45%;
+}
+
+@media only screen and (max-width: 662px) {
+  .head .righthead .sofie {
+    width: 100%;
+    top: 70%;
+    left: -50%;
+  }
+}
+
+.head .righthead .title-content {
+  margin: auto;
+  width: 100%;
+}
+
+.head .righthead .zirkus {
+  color: #c21d7d;
+  font-family: -webkit-pictograph;
+  font-size: 69px;
+  font-weight: 900;
+  line-height: 21px;
+}
+
+.head .righthead .revsbech {
+  color: #ffec00;
+  font-size: 40px;
+  font-family: cursive;
+}
+
+@media only screen and (max-width: 662px) {
+  .head .righthead .zirkus {
+    font-size: 12vw;
+  }
+  .head .righthead .revsbech {
+    font-size: 7vw;
+  }
+}
+
+.head .righthead hr {
+  margin-top: 0;
+}
+
+.head .righthead .slogan {
+  color: #c21d7d;
+  font-weight: 600;
+}
+
+.head .righthead div {
+  text-align: right;
+}
+
+a {
+  color: #3f0038;
+}
+
+.container-fluid .row .editable .WordSection1 {
+  color: #260021 !important;
+  font-family: "Urbanist", sans-serif !important;
+}
+
+.container-fluid .row .editable .WordSection1 p.MsoNormal, .container-fluid .row .editable .WordSection1 li.MsoNormal, .container-fluid .row .editable .WordSection1 div.MsoNormal {
+  color: #260021 !important;
+  font-family: "Urbanist", sans-serif !important;
+}
+
+.container-fluid .row .editable h1, .container-fluid .row .editable h2, .container-fluid .row .editable h3 {
+  color: #260021 !important;
+  font-family: "Urbanist", sans-serif !important;
+  font-weight: 900;
+}
+
+.purple {
+  width: 100%;
+  background-color: #f7b138;
+  color: #eb5ea0d0;
+  text-align: center;
+}
+
+.purple .social-icons {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media only screen and (max-width: 662px) {
+  .purple .social-icons {
+    margin-top: 10%;
+    -webkit-transform: rotate(12deg);
+            transform: rotate(12deg);
+  }
+}
+
+.purple .social-icons .col-sm-1 {
+  margin: 0 10px;
+}
+
+.purple .icon-title {
+  font-size: 12px;
+}
+
+.purple .fab, .purple .fas {
+  font-size: 2.6em;
+  text-shadow: #ffc600 2px 1px 0px;
+}
+
+.purple.subheader {
+  overflow: hidden;
+  padding: 69px 0;
+  -webkit-clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 78%);
+          clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 78%);
+  height: 210px;
+  position: absolute;
+  top: 38vw;
+}
+
+@media only screen and (max-width: 662px) {
+  .purple.subheader {
+    -webkit-clip-path: polygon(0% 0%, 100% 28%, 100% 99%, 0% 74%);
+            clip-path: polygon(0% 0%, 100% 28%, 100% 99%, 0% 74%);
+    height: 250px;
+    top: 157vw;
+  }
+}
+
+.row {
+  padding: 0 30px;
+}
+
+.row .col {
+  padding: 0;
+}
+
+.cards .card {
+  margin: auto;
+  max-width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.cards .col {
+  margin-bottom: 15px;
+}
+
+.cards .row {
+  min-height: 350px;
+}
+
+@media only screen and (max-width: 662px) {
+  .cards .row {
+    margin-top: 100px;
+  }
+}
+
+.myrow {
+  background-color: white;
+  padding: 30px !important;
+}
+
+footer {
+  margin-bottom: 0 !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+}
+/*# sourceMappingURL=styles.css.map */
