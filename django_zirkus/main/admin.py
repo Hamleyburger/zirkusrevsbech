@@ -16,7 +16,8 @@ class PostAdmin(admin.ModelAdmin):
         'created_date'
         #,'image_tag'
     )
-    fields = ['admin_name', 'mandatory', 'title', 'body', 'image'
+    fields = ['title', 'body', 'image'
+    # Do NOT display mandatory and admin_name for admin. They make it possible to mess up the code so cards don't exist or can't be identified
     ]
     # This was used in fecobiome to override save method (or add to?) to automatically store author.
     # def save_model(self, request, obj, form, change):
