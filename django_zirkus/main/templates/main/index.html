@@ -12,6 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;1,100;1,200;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/603271f4a3.js" crossorigin="anonymous"></script>
@@ -32,99 +33,93 @@
                 <img class="sofie" src="{% static 'main/images/solfie farvemod.jpg' %}" alt="Overlay flower pic">
             </div>
         </div>
-
-
-
     </div>
+
     <div class="purple container-fluid subheader shadow">
         <div class="row social-icons">
             <div class="col-2 col-sm-1 p-0">
-                <i class="fas fa-phone-square"></i>
-                <p class="icon-title">
-                    Telefon
-                </p>
+                <a class="iconwrapper" href="tel:{{ details.phone }}">
+                    <i class="fas fa-phone-square"></i>
+                    <p class="icon-title">
+                        Telefon
+                    </p>
+                </a>
             </div>
             <div class="col-2 col-sm-1 p-0">
-                <i class="fab fa-instagram-square"></i>
-                <p class="icon-title">
-                    Insta
-                </p>
+                <a class="iconwrapper" href="{{ details.insta }}">
+                    <i class="fab fa-instagram-square"></i>
+                    <p class="icon-title">
+                        Insta
+                    </p>
+                </a>
+
+                </div>
+            <div class="col-2 col-sm-1 p-0">
+                <a class="iconwrapper" href="{{ details.facebook }}">
+                    <i class="fab fa-facebook-square"></i>
+                    <p class="icon-title">
+                        Facebook
+                    </p>
+                </a>
             </div>
             <div class="col-2 col-sm-1 p-0">
-                <i class="fab fa-facebook-square"></i>
-                <p class="icon-title">
-                    Facebook
-                </p>
-            </div>
-            <div class="col-2 col-sm-1 p-0">
-                <i class="fas fa-envelope-square"></i>
-                <p class="icon-title">
-                    E-mail
-                </p>
+                <a class="iconwrapper" href="mailto:{{ details.email }}">
+                    <i class="fas fa-envelope-square"></i>
+                    <p class="icon-title">
+                        E-mail
+                    </p>
+                </a>
             </div>
         </div>
     </div>
 
-<main>
-    <div class="container-fluid cards">
-        <div class="row justify-content-between">
-            
-            <div class="editable col col-12 col-md-3">
+    <main>
+        <div class="container-fluid cards">
+            <div class="row justify-content-between">
                 
-                <div class="card shadow" style="width: 18rem;">
-                    <img src="{% static 'main/images/insta/flagrebrud.jpeg' %}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <div w3-include-html="tekster/blok1.html"></div>
+                {% for card in cards %}
+                <div class="editable col col-12 col-md-3">
+                    <div class="card shadow" style="width: 18rem;">
+                        <img src="{{ card.image.url }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title ">
+                                {{ card.title | safe}}
+                            </h5>
+                            {{ card.body | safe}}
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="editable col col-12 col-md-3">
-                <div class="card shadow" style="width: 18rem;">
-                    <img src="{% static 'main/images/insta/guldbabe.jpeg' %}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <div w3-include-html="tekster/blok2.html"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="editable col col-12 col-md-3">
-                <div class="card shadow" style="width: 18rem;">
-                    <img src="{% static 'main/images/insta/treboern.jpeg' %}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <div w3-include-html="tekster/blok3.html"></div>
-                    </div>
-                </div>
-            </div>
-            </div>
-            </div>
-            
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="editable col myrow shadow">
-                        <div w3-include-html="tekster/nyheder.html"></div>
-            </div>
-            </div>
-            </div>
-            
-            <div class="container-fluid">
-                <div class="row">
-                    <div class="editable col myrow shadow">
-                        <div w3-include-html="tekster/beskrivelse.html"></div>
+                {% endfor %}
+
             </div>
         </div>
-    </div>
-</main>
+        
+        {% for post in posts %}
+        <div class="container-fluid post">
+            <div class="row">
+                <div class="editable col myrow shadow">
+                    <h5>{{ post.title }}</h5>
+                    <p>{{ post.body | safe}}</p>
+                    {% if post.image %}
+                    <img src="{{ post.image.url }}" alt="">
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </main>
     
     <footer class="purple container-fluid shadow">
         <div class="row">
             <div class="col">
-                <div w3-include-html="tekster/footer.html"></div>
+                <p>Zirkus Revsbech | {{ details.address }}</p>
             </div>
         </div>
     </footer>
 
-    <script>
-        includeHTML()
-    </script>
+        <script>
+            includeHTML()
+        </script>
 
     </body>
-    </html>
+</html>

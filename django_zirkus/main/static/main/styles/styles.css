@@ -221,7 +221,7 @@ a {
   font-weight: 900;
 }
 
-.purple {
+.purple, .purple {
   width: 100%;
   background-color: #ffd739;
   color: #eb5ea0d0;
@@ -237,13 +237,13 @@ a {
           justify-content: center;
 }
 
-.purple .social-icons {
+.purple .social-icons, .purple .social-icons, .purple .social-icons, .purple .social-icons {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.purple .social-icons .col-sm-1 {
+.purple .social-icons .iconwrapper, .purple .social-icons .iconwrapper, .purple .social-icons .iconwrapper, .purple .social-icons .iconwrapper {
   margin: 0 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -258,18 +258,23 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  color: #eb5ea0d0;
 }
 
-.purple .icon-title {
+.purple .social-icons .iconwrapper:hover, .purple .social-icons .iconwrapper:hover, .purple .social-icons .iconwrapper:hover, .purple .social-icons .iconwrapper:hover {
+  color: #e64482d0;
+}
+
+.purple .icon-title, .purple .icon-title {
   font-size: 12px;
 }
 
-.purple .fab, .purple .fas {
+.purple .fab, .purple .fas, .purple .fab, .purple .fas {
   font-size: 2.6em;
   text-shadow: #ffc600 2px 1px 0px;
 }
 
-.purple.subheader {
+.purple.subheader, .purple.subheader {
   overflow: hidden;
   padding: 69px 0;
   -webkit-clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 78%);
@@ -281,7 +286,7 @@ a {
 }
 
 @media only screen and (max-width: 662px) {
-  .purple.subheader {
+  .purple.subheader, .purple.subheader {
     -webkit-clip-path: polygon(0% 0%, 100% 19%, 100% 81%, 0% 100%);
             clip-path: polygon(0% 0%, 100% 19%, 100% 81%, 0% 100%);
     height: 279px;
@@ -305,6 +310,11 @@ a {
      object-fit: cover;
 }
 
+.cards .card .card-body .card-title {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
 .cards .col {
   margin-bottom: 15px;
 }
@@ -322,6 +332,10 @@ a {
 .myrow {
   background-color: white;
   padding: 30px !important;
+}
+
+.post img {
+  max-width: 300px;
 }
 
 footer {
