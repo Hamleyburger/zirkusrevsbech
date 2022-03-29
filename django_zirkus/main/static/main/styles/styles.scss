@@ -29,7 +29,7 @@ html {
         font-family: 'Urbanist', sans-serif;
         font-weight: 400;
         font-size: 18px;
-        filter: drop-shadow(3px 8px 10px rgba(50, 50, 0, 0.5)); // makes things indside (also clip paths) have this shadow
+        // filter: drop-shadow(3px 8px 10px rgba(50, 50, 0, 0.5)); // makes things indside (also clip paths) have this shadow
         .container-fluid {
             margin-bottom: 50px;
         }
@@ -259,7 +259,7 @@ a {
         height: 210px;
         position: absolute;
         top: 45vw;
-        z-index: 2;
+        z-index: 1;
         @media only screen and (max-width: 662px) {
         //clip-path: polygon(0% 10%, 100% 0%, 100% 100%, 0% 78%);
 
