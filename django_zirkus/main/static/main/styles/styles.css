@@ -241,6 +241,10 @@ a {
           justify-content: center;
 }
 
+.purple .social-icons [class*="col-"], .purple .social-icons [class*="col-"], .purple .social-icons [class*="col-"], .purple .social-icons [class*="col-"] {
+  min-width: 54px !important;
+}
+
 @media only screen and (max-width: 662px) {
   .purple .social-icons, .purple .social-icons, .purple .social-icons, .purple .social-icons {
     padding: 0;
