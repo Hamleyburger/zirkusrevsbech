@@ -34,7 +34,7 @@ class PostAdmin(admin.ModelAdmin):
 class DetailsAdmin(admin.ModelAdmin):
 
     # list_display = ['address', 'phone', 'email', 'insta', 'facebook']
-    fields = ['address', 'phone', 'email', 'insta', 'facebook']
+    fields = ['address', 'phone', 'show_phone', 'email', 'insta', 'facebook']
     list_display = ['address', 'phone', 'email', 'insta', 'facebook']
     def has_add_permission(self, request, obj=None):
         return False

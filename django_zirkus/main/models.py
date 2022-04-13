@@ -23,9 +23,9 @@ class Post(models.Model):
 # Create your models here.
 class Details(models.Model):
 
-    address = models.CharField(max_length=150, blank=False,
-                             help_text="Titel")
-    phone = PhoneNumberField(null=False, blank=False, unique=True)
+    address = models.CharField(max_length=150, blank=False, verbose_name="Adresse")
+    phone = PhoneNumberField(null=False, blank=False, unique=True, verbose_name="Telefon")
+    show_phone = models.BooleanField(default=False, verbose_name="Offentliggør telefon på siden")
     email = models.EmailField()
     insta = models.URLField()
     facebook = models.URLField()
