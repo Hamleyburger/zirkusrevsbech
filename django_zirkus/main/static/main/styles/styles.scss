@@ -310,14 +310,35 @@ a {
 }
 .myrow {
     background-color: white;
-    padding: 30px !important;
+    padding: 0.5rem 1rem 1.5rem 1rem !important;
+    text-align: justify;
+    hyphens: auto;
+    @media only screen and (max-width: 450px) {
+        text-align: center;
+    }
     //padding: 30px !important;
 }
 
 .post {
+    h5 {
+        margin: 10px 0 20px 0;
+        font-weight: 900;
+        font-size: larger;
+    }
     img {
-        width: 300px;
-        max-width: 100%;
+        width: 100%;
+        max-width: 300px;
+        float: left;
+        padding: 0 20px 0 0;
+    }
+
+    @media only screen and (max-width: 450px) {
+        img {
+            float: none;
+            width: 100%;
+            padding: 0;
+            margin-bottom: 20px;
+        }
     }
 }
 
@@ -332,4 +353,5 @@ footer {
     bottom: 0;
     width: 100%;
     height: $footer-height;
+    text-align: center;
   }
